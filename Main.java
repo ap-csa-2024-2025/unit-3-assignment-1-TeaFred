@@ -4,6 +4,32 @@ public class Main
 {
   public static void main(String[] args)
   {
-    // write solutions to problems here
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Type in a length: ");
+    double rec1Len = sc.nextDouble();
+    System.out.println("Type in a width: ");
+    double rec1Wid = sc.nextDouble();
+    System.out.println("Type in a length: ");
+    double rec2Len = sc.nextDouble();
+    System.out.println("Type in a width: ");
+    double rec2Wid = sc.NextDouble();
+
+    Rectangle rec1 = new Rectangle(rec1Len, rec2Wid);
+    Rectangle rec2 = new Rectangle(rec2Len, rec2Wid);
+
+    boolean isRotated = false;
+
+    if ( (rec1.getLength() == rec2.getWidth()) || (rec2.getLength() == rec1.getWidth()) )
+    {
+      isRotated = true;
+    }
+    System.out.println(isRotated);
+
+    boolean isCongruent = false;
+
+    if (((rec1.getLength() == rec2.getWidth()) || (rec2.getLength() == rec1.getWidth())) || rec1.equals(rec2))
+    {
+      boolean isCongruent = true;
+    }
   }
 }
