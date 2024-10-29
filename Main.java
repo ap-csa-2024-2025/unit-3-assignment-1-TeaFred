@@ -12,9 +12,9 @@ public class Main
     System.out.println("Type in a length: ");
     double rec2Len = sc.nextDouble();
     System.out.println("Type in a width: ");
-    double rec2Wid = sc.NextDouble();
+    double rec2Wid = sc.nextDouble();
 
-    Rectangle rec1 = new Rectangle(rec1Len, rec2Wid);
+    Rectangle rec1 = new Rectangle(rec1Len, rec1Wid);
     Rectangle rec2 = new Rectangle(rec2Len, rec2Wid);
 
     boolean isRotated = false;
@@ -27,9 +27,20 @@ public class Main
 
     boolean isCongruent = false;
 
-    if (((rec1.getLength() == rec2.getWidth()) || (rec2.getLength() == rec1.getWidth())) || rec1.equals(rec2))
+    if (rec1.equals(rec2) || isRotated)
     {
-      boolean isCongruent = true;
+      isCongruent = true;
     }
+
+    System.out.println(isCongruent);
+
+    boolean isSimilar = false;
+
+    if ( (rec1.getWidth()/rec2.getWidth()) == (rec1.getLength()/rec2.getLength()) || isCongruent)
+    {
+      isSimilar = true;
+    }
+    System.out.println(isSimilar);
+
   }
 }
